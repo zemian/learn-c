@@ -4,6 +4,23 @@
 #include <limits.h>
 #include <float.h>
 
+/*
+CHAR_BIT    :   8
+CHAR_MAX    :   127
+CHAR_MIN    :   -128
+INT_MAX     :   2147483647 or 2_147_483_647
+INT_MIN     :   -2147483648
+LONG_MAX    :   9223372036854775807 or 9_223_372_036_854_775_807
+LONG_MIN    :   -9223372036854775808
+SCHAR_MAX   :   127
+SCHAR_MIN   :   -128
+SHRT_MAX    :   32767
+SHRT_MIN    :   -32768
+UCHAR_MAX   :   255
+UINT_MAX    :   4294967295 or 4_294_967_295
+ULONG_MAX   :   18446744073709551615 or 18_446_744_073_709_551_615
+USHRT_MAX   :   65535
+*/
 int main(int argc, char** argv) {
 
     printf("CHAR_BIT    :   %d\n", CHAR_BIT);
