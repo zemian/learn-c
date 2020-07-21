@@ -1,43 +1,50 @@
 // https://www.tutorialspoint.com/cprogramming/c_data_types.htm
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
-#include <float.h>
 
 /*
-CHAR_BIT    :   8
-CHAR_MAX    :   127
-CHAR_MIN    :   -128
-INT_MAX     :   2147483647 or 2_147_483_647
-INT_MIN     :   -2147483648
-LONG_MAX    :   9223372036854775807 or 9_223_372_036_854_775_807
-LONG_MIN    :   -9223372036854775808
-SCHAR_MAX   :   127
-SCHAR_MIN   :   -128
-SHRT_MAX    :   32767
-SHRT_MIN    :   -32768
-UCHAR_MAX   :   255
-UINT_MAX    :   4294967295 or 4_294_967_295
-ULONG_MAX   :   18446744073709551615 or 18_446_744_073_709_551_615
-USHRT_MAX   :   65535
+
+Type            Storage size    Value range
+char            1 byte          -128 to 127 or 0 to 255
+unsigned char   1 byte          0 to 255
+signed char     1 byte          -128 to 127
+int             2 or 4 bytes    -32,768 to 32,767 or -2,147,483,648 to 2,147,483,647
+unsigned int    2 or 4 bytes    0 to 65,535 or 0 to 4,294,967,295
+short           2 bytes         -32,768 to 32,767
+unsigned short  2 bytes         0 to 65,535
+long            8 bytes         -9223372036854775808 to 9223372036854775807
+unsigned long   8 bytes         0 to 18446744073709551615
+
+To get the exact size of a type or a variable on a particular platform, you can use the sizeof 
+operator. The expressions sizeof(type) yields the storage size of the object or type in bytes.
+*/
+
+
+#include <stdio.h>
+
+/*
+sizeof(char) :   1
+sizeof(unsigned char) :   1
+sizeof(signed char) :   1
+sizeof(int) :   4
+sizeof(unsigned int) :   4
+sizeof(short) :   2
+sizeof(unsigned short) :   2
+sizeof(long) :   8
+sizeof(unsigned long) :   8
 */
 int main(int argc, char** argv) {
 
-    printf("CHAR_BIT    :   %d\n", CHAR_BIT);
-    printf("CHAR_MAX    :   %d\n", CHAR_MAX);
-    printf("CHAR_MIN    :   %d\n", CHAR_MIN);
-    printf("INT_MAX     :   %d\n", INT_MAX);
-    printf("INT_MIN     :   %d\n", INT_MIN);
-    printf("LONG_MAX    :   %ld\n", (long) LONG_MAX);
-    printf("LONG_MIN    :   %ld\n", (long) LONG_MIN);
-    printf("SCHAR_MAX   :   %d\n", SCHAR_MAX);
-    printf("SCHAR_MIN   :   %d\n", SCHAR_MIN);
-    printf("SHRT_MAX    :   %d\n", SHRT_MAX);
-    printf("SHRT_MIN    :   %d\n", SHRT_MIN);
-    printf("UCHAR_MAX   :   %d\n", UCHAR_MAX);
-    printf("UINT_MAX    :   %u\n", (unsigned int) UINT_MAX);
-    printf("ULONG_MAX   :   %lu\n", (unsigned long) ULONG_MAX);
-    printf("USHRT_MAX   :   %d\n", (unsigned short) USHRT_MAX);
+    printf("sizeof(char) :   %lu\n", sizeof(char));
+    printf("sizeof(unsigned char) :   %lu\n", sizeof(unsigned char));
+    printf("sizeof(signed char) :   %lu\n", sizeof(signed char));
+
+    printf("sizeof(int) :   %lu\n", sizeof(int));
+    printf("sizeof(unsigned int) :   %lu\n", sizeof(unsigned int));
+
+    printf("sizeof(short) :   %lu\n", sizeof(short));
+    printf("sizeof(unsigned short) :   %lu\n", sizeof(unsigned short));
+
+    printf("sizeof(long) :   %lu\n", sizeof(long));
+    printf("sizeof(unsigned long) :   %lu\n", sizeof(unsigned long));
 
     return 0;
 }
